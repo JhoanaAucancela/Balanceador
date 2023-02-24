@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>App 4</title>
+</head>
+<body>
+    <div class="container">
+        <div class="nav">
+            <h1>Ice Cream & coffee</h1>
+        </div>
+        <div class="contenido">
+            <h1>Elije una opción:</h1>
+            <a href="javascript:abrirCafe()"><img src="{{ url_for('static', filename='img/Coffee.png') }}" class="img1"></a>
+            <a href="javascript:abrirHelado()"><img src="{{ url_for('static', filename='img/Helado.png') }}" class="img2"></a>
+        </div>
+        
+    </div>
+   <!--Formularios-->
+   <div class="ventana" id="formularioCafe">
+    <div id="cerrar"><a href="javascript:cerrarCafe()"><img src="{{ url_for('static', filename='img/error.png') }}"></a></div>
+    <div class="formCafe">
+        <h1>Cafeteria</h1>
+        <form>
+            <fieldset>
+                <legend>Datos cliente</legend>
+                <label for="nombre_cliente">Nombre cliente</label>
+                <input type="text" id="nombre_cliente" /><br />
+                <label for="telefono_cliente">Telefono cliente</label>
+                <input type="tel" id="telefono_cliente" /><br />
+                <label for="email_cliente">Email cliente</label>
+                <input type="email" id="email_cliente" /><br />
+            </fieldset>
+            <fieldset>
+                <legend>Elige tu helado</legend>
+                <h2>Tipo</h2>
+                <input type="radio" name="sabor" id="capuchino" value="capuchino" checked />Capuchino<br />
+                <input type="radio" name="sabor" id="chocolate" value="chocolate" />Chocolate<br />
+                <input type="radio" name="sabor" id="expreso" value="expreso" />Expreso<br />
+                <h2>Extras</h2>
+                <input type="checkbox" name="extras[]" id="caramelo" value="caramelo" />Caramelo<br />
+                <input type="checkbox" name="extras[]" id="leche" value="leche" />Leche<br />
+                <input type="checkbox" name="extras[]" id="crema" value="crema" />Crema<br />
+            </fieldset>
+            <button type="button" onclick="recogerDatosCafeteria()">Enviar</button>
+        </form>
+    </div>
+</div>
+
+
+   <div class="ventana" id="formularioHelado">
+        <div id="cerrar"><a href="javascript:cerrarHelado()"><img src="{{ url_for('static', filename='img/error.png') }}"></a></div>
+        <div class="formHelados">
+            <h1>Heladeria</h1>
+            <form>
+                <fieldset>
+                    <legend>Datos cliente</legend>
+                    <label for="nombre_cliente">Nombre cliente</label>
+                    <input type="text" id="nombre_cliente" /><br />
+                    <label for="telefono_cliente">Telefono cliente</label>
+                    <input type="tel" id="telefono_cliente" /><br />
+                    <label for="email_cliente">Email cliente</label>
+                    <input type="email" id="email_cliente" /><br />
+                </fieldset>
+                <fieldset>
+                    <legend>Elige tu helado</legend>
+                    <h2>Sabor</h2>
+                    <input type="radio" name="sabor" id="vainilla" value="vainilla" checked />Vainilla<br />
+                    <input type="radio" name="sabor" id="chocolate" value="chocolate" />Chocolate<br />
+                    <input type="radio" name="sabor" id="mixto" value="mixto" />Mixto<br />
+                    <h2>Recipiente</h2>
+                    <input type="radio" name="recipiente" id="copa" value="copa" checked />Copa<br />
+                    <input type="radio" name="recipiente" id="tarrina" value="tarrina" />Tarrina<br />
+                    <h2>Extras</h2>
+                    <input type="checkbox" name="extras[]" id="caramelo" value="caramelo" />Caramelo<br />
+                    <input type="checkbox" name="extras[]" id="kitkat" value="kitkat" />Kitkat<br />
+                    <input type="checkbox" name="extras[]" id="chocolate" value="chocolate" />Chocolate<br />
+                </fieldset>
+                <button type="button" onclick="recogerDatosHeladeria()">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!--Datos de los formularios-->
+
+    <div id="cont-datos" class="cont-datos">
+        <div id="cerrar"><a href="javascript:cerrarDatosHelados()"><img src="{{ url_for('static', filename='img/error.png') }}"></a></div>
+        <div id="datosHelado"></div>
+    </div>
+
+    <div id="cont-datos-cafe" class="cont-datos">
+        <div id="cerrar"><a href="javascript:cerrarDatosCafe()"><img src="{{ url_for('static', filename='img/error.png') }}"></a></div>
+        <div id="datosCafe"></div>
+    </div>
+    
+    
+   
+</body>
+</html>

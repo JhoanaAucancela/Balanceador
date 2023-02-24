@@ -1,0 +1,111 @@
+body{
+      background-image: linear-gradient(135deg,#f5addf,#AD9EC3,#7873EE,#69A4C9,#D3B9E5,#40b7c0,#FFFFFF);
+      background-size: 500%;
+      animation: fanimado 30s infinite;
+      overflow: hidden;
+  }
+
+  @keyframes fanimado{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+.nav{
+    top: 0%;
+    left: 0%;
+    position: fixed;
+    width: 100%;  
+    height: 10%;
+    display:inline-block;
+    box-sizing: border-box;
+    z-index:1;
+    display: block;
+    background-color: rgba(82, 80, 80, 0.082);
+}
+
+.nav > h1{
+    top: 2%;
+    font-family: Cooper Black;
+    text-align: center;
+    size: 30px;
+}
+.contenido{
+    position: absolute;
+    width: 100%;
+    top: 10%;
+    text-align: center;
+}
+.contenido > h1{
+    font-family: Comic Sans MS;
+}
+.contenido > a > .img1{
+    display:inline-block;
+    width: 20%;
+}
+.contenido > a > .img2{
+    display:inline-block;
+    width: 15%;
+}
+a:hover > .img1 {
+    width: 16%;
+}
+a:hover > .img2 {
+    width: 11%;
+}
+.ventana{
+    background-image: linear-gradient(135deg,#f5addf,#AD9EC3,#7873EE,#69A4C9,#D3B9E5,#40b7c0,#FFFFFF);
+    width: 35%;
+    height:95%;
+    color: rgb(4, 5, 56);
+    font-family: Comic Sans MS;
+    font-size: 18px;
+    text-align: center;
+    padding: 2%;
+    min-height: 250px;
+    border-radius: 22px;
+    position: absolute;
+    left: 30%;
+    top: 2%;
+    display: none;
+    z-index:1;
+    overflow: auto;
+    box-sizing: border-box; 
+}
+
+#cerrar{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    /*background:rgba(0,0,0,0.7);*/
+}
+
+#cerrar > a >img{
+    width: 25px;
+    height: auto;
+}
+
+.cont-datos{
+    background: rgba(73, 0, 102, 0.89);
+    width: 25%;
+    color: rgba(255,255,255,1);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    padding: 2%;
+    min-height: 250px;
+    border-radius: 22px;
+    position: absolute;
+    left: 35%;
+    top: 24%;
+    display: none;
+    z-index:1;
+    overflow: auto;
+    box-sizing: border-box; 
+}
+

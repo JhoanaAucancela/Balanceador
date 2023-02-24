@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App 5</title>	 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container-header"></div>
+
+    <div class="container">
+        <div class="header-container"><h2 class="title"></h2></div>
+        <div class="header-container"><h1 class="title">Yambal</h1></div>
+        <div class="header-container"><h2 class="title"></h2></div>
+    </div>
+
+    <div class="container">
+        
+        <a href="{{ url_for('static', filename='index.html') }}">Home</a>
+        <a href="{{ url_for('static', filename='facialtreatment.html') }}">Tratamiento facial</a>
+        <a href="{{ url_for('static', filename='personalcare.html') }}">Cuidado Personal</a>
+        <a href="{{ url_for('static', filename='makeup.html') }}">Maquillaje</a>
+        <a href="{{ url_for('static', filename='perfumes.html') }}">Perfumes</a>
+    </div>
+    <br/>
+        <div class="banner-container">
+            <div class="banner">
+                <h3>TOTAL BLOCK</h3>
+                <h1>Expertos en cuidar lo más valioso</h1>
+                <p>Continuamos innovando para darte la mejor calidad y el cuidado más completo para tu piel.</p>
+                <a>Ver Todo</a>
+                <br/>
+                <br/>
+            </div>
+            <div class="banner">
+                
+                <img src="{{ url_for('static', filename='assets/image_banner.png') }}" class="img-banner">
+            </div>
+        </div>
+
+        <div class="body-container">
+            <h1>Los favoritos</h1>
+
+            <div class="favorites-container">
+                <div class="favorites">
+                    <img src="{{ url_for('static', filename='assets/favorite1.jpg') }}" class="img-favorite">
+                    <p>Base Líquida Hidratante</p>
+                    <p><b>$19.50</b></p>
+                    <a>Agregar a la bolsa</a>
+                </div>
+                <div class="favorites">
+                    <img src="{{ url_for('static', filename='assets/favorite2.jpg') }}" class="img-favorite">
+                    <p>Ohm Soul Parfum</p>
+                    <p><b>$37.50</b></p>
+                    <a>Agregar a la bolsa</a>
+                </div>
+                <div class="favorites">
+                    <img src="{{ url_for('static', filename='assets/favorite3.jpg') }}" class="img-favorite">
+                    <p>Sentiva Ólea</p>
+                    <p><b>$35.10</b></p>
+                    <a>Agregar a la bolsa</a>
+
+                </div>
+                <div class="favorites">
+                    <img src="{{ url_for('static', filename='assets/favorite4.jpg') }}" class="img-favorite">
+                    <p>Aires del Caribe</p>
+                    <p><b>$30.50</b></p>
+                    <a>Agregar a la bolsa</a>
+                </div>
+            </div>
+        </div>
+
+        <br/><br/><br/>
+
+        <div class="banner-container">
+            <div class="banner">
+                
+                <img src="{{ url_for('static', filename='assets/image.png') }}" class="img-banner-catalogo">
+            </div>
+            <div class="banner">
+                <div class="catalogo-container">
+                    <div class="catalogo-item">
+                        <div>
+                            <h1>Colección Viva Color</h1>
+                            <h2>¡Sombras en barra!</h2>
+                            <h3>Crea looks radieantes</h3>
+                            <a>Comprar</a>
+                        </div>
+                    </div>
+                    <div class="catalogo-item">
+                        
+                        <img src="{{ url_for('static', filename='assets/image-cat.png') }}" class="img-catalogo">
+                    </div>
+                </div> 
+                <br/>
+                <br/>
+
+                <div class="catalogo-container">
+                    <div class="catalogo-item">
+                        <h2>SENTIVA</h2>
+                        <h1>Esencia Hidratante</h1>
+                        <h3>Un spray de hidratación y frescura</h3>
+                        <a>Comprar</a>
+                    </div>
+                    <div class="catalogo-item"><img src="{{ url_for('static', filename='assets/image-cat1.png') }}" class="img-catalogo"></div>
+                </div>  
+            </div>
+        </div>
+
+    
+</body>
+</html>

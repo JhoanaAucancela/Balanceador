@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App 3</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="assets/css/main.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}">
+</head>
+<body>
+    <header class="nav-bar">
+        <nav>
+            <div>
+                <!-- <img class="js-challenge" src="assets/img/js-challenge-logo.png" alt=""> -->
+                <img class="js-challenge" src="{{ url_for('static', filename='assets/img/js-challenge-logo.png') }}" alt="">
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Main Section  -->
+        <section class="main-section">
+            <header>
+                <h3>Ejercicios</h3>
+                <h1>JavaScript</h1>
+            </header>
+                <h2><strong>Modificado Por:</strong></h2>
+                <h4>- Auqui Manuel</h4>
+                <h4>- Aucancela Jhoana</h4>
+                <p class="La_nota_que_esperamos">Un 10 a de ser Ing. Ivonne 😃😉💛</p>
+        </section>
+
+        <!-- Nav Works  -->
+        <section class="nav-works nav-works--inside">
+            <div class="card">
+                <!-- <div class="card__item" onclick="location.href='./taller-1.html'"> -->
+                <div class="card__item" onclick="location.href='./Ejercicios/taller-1.html'">
+                    <!-- <img src="assets/img/circle.png" alt=""> -->
+                    <img src="{{ url_for('static', filename='assets/img/circle.png') }}" alt="">
+                    <div>
+                        <header>
+                            <h4>TALLER #1</h4>
+                            <h2>Figuras Geometricas</h2>
+                        </header>
+                        <p>Calculo básicos para Cuadrados, Triangulos y Circulos.</p>
+                    </div>
+                </div>
+                <div class="card__item" onclick="location.href='./Ejercicios/taller-2.html'">
+                    <!-- <img src="assets/img/price.png" alt=""> -->
+                    <img src="{{ url_for('static', filename='assets/img/price.png') }}" alt="">
+                    <div>
+                        <header>
+                            <h4>TALLER #2</h4>
+                            <h2>Porcentajes y descuentos</h2>
+                        </header>
+                        <p>Calculo básicos para precios, descuentos y cupones de pago.</p>
+                    </div>
+                </div>
+                <div class="card__item" onclick="location.href='./Ejercicios/taller-3.html'">
+                    <!-- <img src="assets/img/discount.png" alt=""> -->
+                    <img src="{{ url_for('static', filename='assets/img/discount.png') }}" alt="">
+                    <div>
+                        <header>
+                            <h4>TALLER #3</h4>
+                            <h2>Media, Moda y Mediana</h2>
+                        </header>
+                        <p>Calculos básicos y avanzados.</p>
+                    </div>
+                </div>
+                <div class="card__item" onclick="location.href='./Ejercicios/taller-4.html'">
+                    <!-- <img src="assets/img/dollar.png" alt=""> -->
+                    <img src="{{ url_for('static', filename='assets/img/dollar.png') }}" alt="">
+                    <div>
+                        <header>
+                            <h4>TALLER #4</h4>
+                            <h2>Analisis Salarial</h2>
+                        </header>
+                        <p>Calculo básicos para trabajar con Salarios (medianas y top 10%).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

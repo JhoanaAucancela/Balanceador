@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="Content-Security-Policy" content="default-src: http: https: 'self'" />
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.1/mdb.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>App 1</title>
+    <style>
+
+        html {
+            font-size: 20px;
+            line-height: 1.6;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        form * {
+            font-family: inherit;
+            font-size: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container text-center d-flex flex-column alto justify-content-center ">
+        <h1 class="font-weight-bold text-info">Generador de gifs</h1>
+        <form>
+            <label for="search">Escribe una palabra: </label>
+            <input class="rounded" id="search" type="search" />
+            <button class="btn btn-info" id="btnSearch"><i class="fas fa-search"></i></button>
+        </form>
+        <div class="out figure"></div>
+    </main>
+    <script>
+        let APIKEY = "9JUMywLontkrE7DyXlO2Ny5CxVmOm78o";
+        // you will need to get your own API KEY
+        // https://developers.giphy.com/dashboard/
+        document.addEventListener("DOMContentLoaded", init);
+        function init() {
+            document.getElementById("btnSearch").addEventListener("click", (ev) => {
+                ev.preventDefault(); //to stop the page reload
+                let url = `https://api.giphy.com/v1/gifs/search?api_key=${APIKEY}&limit=1&q=`;
+                let str = document.getElementById("search").value.trim();
+                url = url.concat(str);
+                console.log(url);
+                fetch(url)
+                    .then((response) => response.json())
+                    .then((content) => {
+                        //  data, pagination, meta
+                        console.log(content.data);
+                        console.log("META", content.meta);
+                        let fig = document.createElement("figure");
+                        let img = document.createElement("img");
+                        let fc = document.createElement("figcaption");
+                        img.src = content.data[0].images.downsized.url;
+                        img.alt = content.data[0].title;
+                        fc.textContent = content.data[0].title;
+                        fig.appendChild(img);
+                        fig.appendChild(fc);
+                        let out = document.querySelector(".out");
+                        out.insertAdjacentElement("afterbegin", fig);
+                        document.querySelector("#search").value = "";
+                    })
+                    .catch((err) => {
+                        console.error(err);
+                    });
+            });
+        }
+    </script>
+</body>
+
+</html>
